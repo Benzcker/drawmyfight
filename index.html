@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Draw My Fight</title>
+
+	<style type="text/css">
+		body{
+			text-align: center;
+			background-color: #101010;
+			color: #dcdcdc;
+		}
+		canvas{
+			/*height: 90vh;*/
+			border: 1px solid white;
+		}
+	</style>
+</head>
+<body>
+<canvas id="canvas" width="1152" height="720"></canvas><br />
+<div id="frameButtons" hidden="true">
+	<button onclick="nextFrame();">N&auml;chstes Bild in Animation</button> 
+	<button onclick="finishAnimation();">Animation beenden</button><br /></div>
+<div id="againButtons" hidden="true">
+	<button onclick="fight();">Nochmal k&auml;mpfen</button>
+</div><br />
+
+<button onclick="toggleJsonStuff()" id="jsonToggler" hidden="true">Hoch- /Runterladen</button>
+<div id="jsonStuff" hidden="true">
+	<div id="jsonuploader">
+		Hochladen: (erst Datei ausw&auml;hlen, dann auf <b>importieren</b> klicken)<br />
+		<input type="file" id="selectFiles" value="Import" /><br />
+		<button id="import">importieren (.json Datei)</button>
+	</div><br />
+	<div id="jsonsaver">
+		<button onclick="save()">Animationen speichern und runterladen</button> Dateiname:<input type="text" id="jsonfilename" value="meine Animationen">
+		<a id="downloadAnchorElem" style="display:none"></a>
+	</div>
+</div>
+</body>
+<script type="text/javascript" src="canvas.js"></script>
+<script type="text/javascript" src="fighter.js"></script>
+<script type="text/javascript" src="text.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="input.js"></script>
+<script type="text/javascript" src="saver.js"></script>
+<script type="text/javascript" src="start.js"></script>
+</html>
